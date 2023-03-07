@@ -1,0 +1,110 @@
+.inter{
+    font-family: 'Inter', sans-serif;
+
+}
+.after_element {
+    background-image: url(images/blue_back.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    z-index: 99;
+    border-bottom-right-radius: 98px;
+
+}
+.after_element:hover {
+    background-image: url(images/green_back.png);
+    z-index: 99;
+    box-shadow: 0 0px 223px #1fce7be0;
+    background-color: #1fce7bdb;
+}
+
+.after_element img {
+    width: 120px;
+} 
+/* .after_element:after {
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 35%;
+    bottom: -60px;
+    right: -59px;
+    background: rgb(18 21 52);
+    transform-origin: 54% 0;
+    transform: rotate(43deg);
+    z-index: 31;
+    border-radius: 0px 8px 1px 0px;
+    border-top: 4px solid #94a3b8; 
+    display: block;
+    overflow: hidden;
+    border-left: 4px solid #94a3b8;
+}
+*/
+
+
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  /* Accordion styles */
+  .tabs {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 710px;
+    margin: 35px 0 15px 210px;
+    position: relative;
+}
+.tab {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+}
+  .tab-label {
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    padding-left: 60px;
+    align-items: center;
+}
+  .tab-label::before {
+    content: "\276F";
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    transition: all 0.35s;
+    left: 0;
+    /* position: absolute; */
+    border: 2px solid #fff !important;
+    padding: 5px 4px 7px 7px;
+    border-radius: 46px;
+    
+    margin-right:30px;
+}
+.tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    transition: all 0.35s;
+    margin-left: 120px;
+}
+  .tab-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    cursor: pointer;
+  }
+  
+  input:checked + .tab-label::after {
+    transform: rotate(90deg);
+  }
+  input:checked + .tab-label::after {
+    transform: rotate(90deg);
+  }
+  input:checked ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+  
