@@ -13,14 +13,15 @@ nav {
     top: 150px;
 }
 .after_element {
-    background-image: url(../images/blue_back.png);
-    background-size:100% 100%;
-    background-repeat:no-repeat;
-    background-position: center;
-    z-index: 99;
-    min-height: 280px;
-    /* border-bottom-right-radius: 98px; */
-
+  background-image: url(../images/blue_back.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 99;
+  min-height: 220px;
+  /* border-bottom-right-radius: 98px; */
+  width: 100%;
+  max-width: 360px;
 }
 .after_element:hover {
     background-image: url(../images/green_back.png);
@@ -30,10 +31,14 @@ nav {
     background-repeat:no-repeat;
     background-position: center;
 }
-
+ul.social_links {
+  position: absolute;
+  right: 28%;
+  top: 220px;
+}
 .after_element img {
-    width: 120px;
-} 
+  width: 90px;
+}
 /*.after_element:hover:after {
     content: '';
     background-image: url(../images/green-border.PNG);
