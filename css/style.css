@@ -23,13 +23,27 @@
 .after_element img {
     width: 120px;
 } 
-/* .after_element:after {
+.after_element:hover:after {
     content: '';
+    background-image: url(../images/green-border.PNG);
+    position: absolute;
+    width: 22%;
+    height: 25%;
+    bottom: 0px;
+    right: -20px;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* .after_element:hover:after {
+    content: '';
+    background-image: url(../images/green-border.PNG);
     position: absolute;
     width: 15%;
     height: 35%;
     bottom: -60px;
     right: -59px;
+    overflow: hidden;
     background: rgb(18 21 52);
     transform-origin: 54% 0;
     transform: rotate(43deg);
@@ -38,9 +52,9 @@
     border-top: 4px solid #94a3b8; 
     display: block;
     overflow: hidden;
-    border-left: 4px solid #94a3b8;
-}
-*/
+    border-left: 4px solid #94a3b8; 
+}*/
+
 
 
   input {
