@@ -2,20 +2,7 @@
     font-family: 'Inter', sans-serif;
 
 }
-/* .slicknav_menu {
-	display:none;
-}
 
-@media screen and (max-width: 991px) {
-	
-	.menu_desktop {
-		display:none !important;
-	}
-	
-	.slicknav_menu {
-		display:block;
-	}
-} */
 nav {
     position: absolute;
     top: 0;
@@ -217,20 +204,30 @@ ul.social_links {
       text-align: center;
   }
   }
-  @media(max-width:1024px){
-     video {
-      height: 1400px !important;
-  }
-  .hero img {
-    display: block;
-    margin: 0 auto;
-    float: none;
-    margin-top: 30px !important;
-}
-  }
 
 
+  @media(min-width:991px){
+    
+    .workflow_mobile{
+      display: none;
+    }
+  }
   @media(max-width:991px){
+    
+    .workflow_mobile{
+      display: block !important;
+    }
+    .workflow_mobile img {
+      margin: 6px auto;
+  }
+    .workflow{
+      display: none;
+    }
+    ul.social_links {
+      position: absolute;
+      right: 19%;
+      top: 176px;
+  }
     .workflow .flex .w-\[400px\] {
       width: 100%;
   }
@@ -252,9 +249,77 @@ ul.social_links {
 .hidden_sm{
   display: none !important;
 }
+
   }
   @media(max-width:767px){
+    ul.social_links {
+      position: inherit;
+      right: 0;
+      top: 0;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+  }
+    .social_links img {
+      margin: 3px auto;
+  }
     .after_element {
       margin: 30px auto;
   }
+  .hero img {
+    width: 200px;
+}
+.hero button#myInput {
+  font-size: 13px;
+  width: 61%;
+  margin: 10px auto;
+  text-align: center;
+  padding: 7px;
+}
+.btn_align{
+  text-align: center;
+}
+.hero a {
+  margin-bottom: 10px !important;
+  padding: 7px;
+  display: block;
+  width: 63%;
+  margin: 0 auto;
+}
+
+}
+
+.mobile-menu {
+  z-index: 9999 !important;
+  background: #000000;
+  position: absolute;
+  width: 100%;
+  color: #Fff;
+}
+button.outline-none.mobile-menu-button {
+  float: right;
+  position: absolute;
+  right: 20px;
+  top: 31px;
+}
+
+.mobile_menu{
+  display: none !important;
+}
+@media(max-width:1024px){
+  .mobile_menu{
+    display: block !important;
   }
+  .menu_desktop{
+    display: none !important;
+  }
+   video {
+    height: 1400px !important;
+}
+.hero img {
+  display: block;
+  margin: 0 auto;
+  float: none;
+  margin-top: 30px !important;
+}
+}

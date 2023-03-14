@@ -1,11 +1,10 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Perma Bull</title>
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/cdn.min.js" defer></script>
@@ -13,6 +12,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.0/jquery.slicknav.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
+  
   
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,21 +22,88 @@
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body style="font-family: 'Barlow', sans-serif;">
+<body style="font-family: 'Barlow', sans-serif;" class="bg-[url('images/team-back.png')] bg-cover bg-no-repeat bg-center">
     
       <!-- hero start -->
       
       <video  autoplay muted loop class="mt-[-200px] pt-[200px] top-0 left-0 w-full h-full object-cover z-10 min-h-[1050px]">
   <source src="images/new_video.mp4" type="video/mp4">
 </video>
-
-<!-- <ul id="menu" class="slicknav_menu">
+<!-- 
+<ul id="menu" class="slicknav_menu">
 	<li><a href="#">item 1</a></li>
 	<li><a href="#">item 2</a></li>
 	<li><a href="#">item 3</a></li>
 	<li><a href="#">item 4</a></li>
 </ul> -->
+
+<!-- Navbar goes here -->
+<nav class=" mobile_menu shadow-lg">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+      <div class="flex space-x-7">
+        <div>
+          <!-- Website Logo -->
+          <a href="/" class="flex items-center py-4 px-2">
+            <img src="images/logo.webp" alt="Logo" class="h-8 w-8 mr-2">
+            
+          </a>
+        </div>
+        <!-- Primary Navbar items -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Home</a>
+          <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Services</a>
+          <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">About</a>
+          <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact Us</a>
+        </div>
+      </div>
+      <!-- Mobile menu button -->
+      <div class=" flex items-center">
+        <button class="outline-none mobile-menu-button">
+        <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+          x-show="!showMenu"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      </div>
+    </div>
+  </div>
+  <!-- mobile menu -->
+  <div class="hidden mobile-menu">
+    <ul class="">
+      <li class="active">
+        <a href="#responsive-header" class="px-2 py-4 hover:bg-green-500 transition duration-300 block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-700  mr-4">
+          <div class="text-[10px] mb-[-5px] text-red indent-[0%]">
+            <p class="text-left text-[#FF0000]">Coming soon</p>
+          </div>
+          Products
+        </a>
+      </li>
+      <li><a href="" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Whitepaper</a></li>
+      <li><a href="" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">FAQ</a></li>
+      <li><a href="" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Team</a></li>
+      <li><a href="" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
+    </ul>
+  </div>
+  <script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</nav>
 
 <nav class="menu_desktop flex items-center justify-between flex-wrap bg-transparent p-3 t-2 ">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -73,16 +140,16 @@
           </div> -->
         </div>
       </nav>
-    <div class="hero bg-center mx-auto height-100  p-10">
-        <div class=" mx-auto">
+    <div class="hero bg-center mx-auto height-100 lg:p-10 md:p-[10px] sm:p-[10px] xs:p-[10px]">
+        <div class="container mx-auto">
             <div class="row lg:columns-2 md:columns-1 sm:columns-1">
                 <div class="xl:mt-10 xl:ml-10">
-                  <h1 class="xl:text-9xl lg:text-4xl md:text-2xl sm:text-4xl xs:text-3xl text-white font-bold">Behold PermaBull </h1>
+                  <h1 class="xl:text-7xl lg:text-4xl md:text-2xl sm:text-4xl xs:text-3xl text-white font-bold">Behold PermaBull </h1>
                   <p class="text-white text-2xl mt-5">DeFi 4.0 ecosystem bridging digital advertising and blockchain with the  help of AI and allowing users to earn crypto via Meta, Google AdMob, Unity and many more.
                     </p>
                     <p class="text-white text-2xl mt-5">Buying PMB tokens means becoming a shareholder of Ad Revenue generated by our ecosystem.</p>
                 
-                    <div class="mt-10 ml-10">
+                    <div class="mt-10 btn_align">
                       <a href="" class="text-white hover:text-[#1FCE7B] rounded-full text-xl bg-[#1FCE7B] hover:bg-[#fff] p-3 pl-10 pr-10">Buy Now <i class="fa-solid fa-chevron-right"></i></a>
                       <button onclick="myFunction()" id="myInput" class=" ml-6 text-[#1FCE7B] hover:text-[#fff] rounded-full text-xl bg-[#fff] hover:bg-[#1FCE7B] p-3 pl-10 pr-10">0x42981d0bfbAf19652937... <i class="fa-solid fa-copy"></i></button>
                     </div>
@@ -99,7 +166,7 @@
     <!-- hero end -->
 
     <!-- Earning crypto -->
-    <div class="earning bg-[#121534] py-20 lg:px-[150px] md:px-[0]">
+    <div class="earning py-20 lg:px-[150px] md:px-[0]">
       <div class="container mx-auto">
         <div class="columns-1">
           <h2 class="text-5xl uppercase text-center text-white font-bold">Earning Crypto Was <span class="text-[#1FCE7B]"> never </span> Easier</h2>
@@ -154,9 +221,80 @@
     </div>
 
     <!-- Earning crypto end -->
+
+<!-- workflow mobile start -->
+<div class="workflow workflow_mobile lg:py-20 md:py-0">
+  <div class="container mx-auto px-2 lg:px-20 lg:pb-[100px] md:pb-[0px] text-center">
+    <div class="row">
+      <div>
+        <h2 class="text-5xl uppercase text-center text-white font-bold mb-8"><span class="text-[#1FCE7B]"> Ecosystem </span>Workflow</h2>
+        <p class="text-2xl text-white">
+          In 2022, worldwide digital advertising revenue was estimated at 600 000 000 000$. We are the first project which gives users the opportunity to simultaneously generate income and promote supply deflation of PermaBull tokens.
+        </p>
+        <p class="text-2xl text-white"><span >WITHOUT</span> any investment, anyone with just access to the internet and a crypto wallet can earn PMB tokens. Let ’s break down the workflow of our products:</p>
+      </div>
+      <div class="px-2 mt-10">
+        <div class="relative lg:mb-20 md:mb-4">
+          <img src="images/mobile.png" class="w-[200px] text-center mx-auto" alt="">
+          <ul class="social_links ">
+            <li><a href=""><img class="w-[150px] mb-1" src="images/appstore.webp" alt=""></a></li>
+            <li><a href=""><img class="w-[150px] mb-1" src="images/google.webp" alt=""></a></li>
+            <li><a href=""><img class="w-[150px] mb-1" src="images/web.webp" alt=""></a></li>
+          </ul>
+        </div>
+        <div class="arrow">
+          <img src="images/arrow.webp" class="w-[25px] mb-2 text-center mx-auto" alt="">
+          <h2 class="text-lg font-medium text-gray-900 text-center"><img src="images/user.webp" class="w-[90px] text-center"></h2>
+          <span class="text-xl font-medium text-white text-right">Users engage with our apps, games and extensions with various utilities and targeted userbases which are available on Desktop, iOS and Android.</span>
+        </div>
+      
+        
+        <!-- Arrow start -->
+        <div class="arrow mt-5">
+          <img src="images/arrow.webp" class="w-[25px] mb-2 text-center mx-auto" alt="">
+          <h2 class="text-lg font-medium text-gray-900 lg:float-right sm:float-none"><img src="images/ad.webp" class="w-[90px]"></h2>
+          <span class="text-xl font-medium text-left text-white mx-auto">As a result of user engagement and activity, PermaBull generates Ad revenue in Fiat.</span>
+
+        </div>
+        <!-- arrow end -->
+      
+        <div class="arrow mt-5">
+          <img src="images/arrow.webp" class="w-[25px] mb-2 text-center mx-auto" alt="">
+          <h2 class="text-lg  lg:float-right sm:float-none"><img src="images/revenue.webp" class="w-[90px]"></h2>
+          <span class="text-xl font-medium text-right text-white">Generated Fiat from Ad revenue gets converted to PMB tokens.</span>
+
+
+        </div>
+
+        <div class="arrow mt-5">
+          <img src="images/arrow.webp" class="w-[25px] mb-2 text-center mx-auto" alt="">
+          <h2 class="text-lg font-medium text-gray-900"><img src="images/pmb.webp" class="w-[90px]"></h2>
+          <span class="text-xl font-medium text-right text-white">50% of total PBM tokens are profits for users.</span>
+
+        </div>
+
+        <div class="arrow mt-5">
+          <img src="images/arrow.webp" class="w-[25px] mb-2 text-center mx-auto" alt="">
+          <h2 class="text-lg font-medium text-gray-900"><img src="images/burned.webp" class="w-[90px]"></h2>
+          <span class="text-xl font-medium text-white ">30% of total PBM tokens are burned. </span>
+        </div>
+
+        <div class="arrow mt-5">
+          <img src="images/arrow.webp" class="w-[25px] mb-2 text-center mx-auto" alt="">
+          <h2 class="text-lg font-medium text-gray-900"><img src="images/maintenance.webp" class="w-[90px]"></h2>
+          <span class="text-xl font-medium text-left text-white">20% of total PBM tokens are used for ecosystem maintenance.</span>
+          
+        </div>
+                  
+      </div>
+    </div>
+  </div>
+</div>
+<!-- workflow mobile end -->
+
     <!-- workflow start -->
-    <div class="workflow bg-[url('images/team-back.png')] bg-cover bg-no-repeat bg-center bg-top py-20">
-      <div class="container mx-auto px-2 lg:px-20 pb-[100px] text-center">
+    <div class="workflow lg:py-20 md:py-0">
+      <div class="container mx-auto px-2 lg:px-20 lg:pb-[100px] md:pb-[0px] text-center">
         <div class="row">
           <div>
             <h2 class="text-5xl uppercase text-center text-white font-bold mb-8"><span class="text-[#1FCE7B]"> Ecosystem </span>Workflow</h2>
@@ -166,12 +304,12 @@
             <p class="text-2xl text-white"><span >WITHOUT</span> any investment, anyone with just access to the internet and a crypto wallet can earn PMB tokens. Let ’s break down the workflow of our products:</p>
           </div>
           <div class="px-2 mt-10">
-            <div class="relative mb-20">
+            <div class="relative lg:mb-20 md:mb-4">
               <img src="images/mobile.png" class="w-[200px] text-center mx-auto" alt="">
-              <ul class="social_links">
-                <li><a href=""><img src="images/appstore.webp" alt=""></a></li>
-                <li><a href=""><img src="images/google.webp" alt=""></a></li>
-                <li><a href=""><img src="images/web.webp" alt=""></a></li>
+              <ul class="social_links ">
+                <li><a href=""><img class="w-[150px] mb-1" src="images/appstore.webp" alt=""></a></li>
+                <li><a href=""><img class="w-[150px] mb-1" src="images/google.webp" alt=""></a></li>
+                <li><a href=""><img class="w-[150px] mb-1" src="images/web.webp" alt=""></a></li>
               </ul>
             </div>
             <div class="arrow">
@@ -179,7 +317,7 @@
             </div>
           
 
-            <div class="flex flex-col md:flex-row items-center justify-center">
+            <div class="flex flex-col md:flex-row items-center flex_small justify-center">
               <div class="flex-shrink-0 h-16 w-[400px] text-white flex items-center justify-center">
                 <span class="text-xl font-medium text-right">Users engage with our apps, games and extensions with various utilities and targeted userbases which are available on Desktop, iOS and Android.</span>
               </div>
@@ -203,7 +341,7 @@
               <img src="images/arrow.webp" class="w-[25px] mb-2 text-center mx-auto" alt="">
             </div>
             <!-- arrow end -->
-            <div class="flex flex-col md:flex-row items-center justify-center">
+            <div class="flex flex-col md:flex-row items-center flex_small2 justify-center">
               
               
               <div class="flex-shrink-0 h-16 w-[155px] text-white flex items-center justify-center  hidden_sm">
@@ -213,7 +351,7 @@
                 <span class="text-xl font-medium text-right"></span>
               </div>
               
-              <div class="flex-shrink-0 flex items-center justify-center pr-4">
+              <div class="flex-shrink-0 flex items-center justify-center lg:pr-4 md:pr-0">
                 <h2 class="text-lg font-medium text-gray-900 lg:float-right sm:float-none"><img src="images/ad.webp" class="w-[90px]"></h2>
                 
               </div>
@@ -234,7 +372,7 @@
             </div>
           
 
-            <div class="flex flex-col md:flex-row items-center justify-center">
+            <div class="flex flex-col md:flex-row items-center flex_small justify-center">
               <div class="flex-shrink-0 h-16 w-[400px] text-white flex items-center justify-center">
                 <span class="text-xl font-medium text-right">Generated Fiat from Ad revenue gets converted to PMB tokens.</span>
               </div>
@@ -246,10 +384,10 @@
                 
               </div>
 
-              <div class="flex-shrink-0 h-16 w-[155px] text-white flex items-center justify-center">
+              <div class="flex-shrink-0 h-16 w-[155px] small_none text-white flex items-center justify-center">
                 <span class="text-xl font-medium text-right"></span>
               </div>
-              <div class="flex-shrink-0 h-16 w-[400px] text-white flex items-center justify-center">
+              <div class="flex-shrink-0 h-16 w-[400px]  small_none text-white flex items-center justify-center">
                 <span class="text-xl font-medium text-right"></span>
               </div>
             </div>
@@ -258,7 +396,7 @@
               <img src="images/arrow.webp" class="w-[25px] mb-2 text-center mx-auto" alt="">
             </div>
 
-            <div class="flex flex-col ml-[94px] mr-[9px] md:flex-row items-center justify-center">
+            <div class="flex flex-col ml-[94px] mr-[9px] md:flex-row flex_small items-center justify-center">
               <div class="flex-shrink-0 h-16 w-[300px] text-white flex items-center justify-center">
                 <span class="text-xl font-medium text-right">50% of total PBM tokens are profits for users.</span>
               </div>
@@ -295,7 +433,7 @@
     </div>
     <!-- workflow end -->
     <!-- Tokenomics -->
-    <div class="tokenomics bg-[#0F1233] py-[60px]">
+    <div class="tokenomics lg:py-[60px] md:py-[0]">
       <div class="container mx-auto">
         <div class="row">
           <div>
@@ -378,7 +516,7 @@
     <!-- Tokenomics end -->
 
     <!-- road map -->
-<div class="roadmap bg-[#000] py-[90px] pb-[200px]">
+<div class="roadmap py-[90px] pb-[200px]">
   <div class="container mx-auto px-10">
     <div class="row">
       <div>
@@ -528,7 +666,7 @@
 
 
     <!-- faq start -->
-<div class="faq bg-[url('images/faqback.png')] mt-[-100px] rounded-t-[100px] bg-cover bg-no-repeat bg-top  py-20">
+<div class="faq mt-[-100px] rounded-t-[100px] py-20">
   <!-- <div class="faq bg-[url('images/faqback.png')] rounded-t-[100px] mt-[-100px] bg-cover bg-no-repeat bg-top  py-20"> -->
   <div class="container mx-auto">
     <div class="row">
@@ -580,7 +718,7 @@
     <!-- faq end -->
 
     <!-- Partners -->
-    <div class="faq bg-[#0C0E24] py-20">
+    <div class="faq py-20">
       <div class="container mx-auto">
         <div class="row">
           <div>
@@ -602,10 +740,10 @@
         <div class="row">
           <div class="grid grid-cols-2 gap-4 items-center">
             <div class="col-span-1">
-              <h2 class="text-5xl uppercase text-right text-white font-bold md:text-center"> <span class="text-[#1FCE7B]">Follow Us </span> On</h2>
+              <h2 class="text-5xl uppercase lg:text-right text-white font-bold md:text-center"> <span class="text-[#1FCE7B]">Follow Us </span> On</h2>
             </div>
             <div class="col-span-1">
-              <ul class="list-inline md:text-center md:mt-[30px]">
+              <ul class="list-inline lg:text-left md:text-center md:mt-[30px]">
                 <li class="inline-block mr-4"><a href="#"><img class="w-[60px]" src="images/telegram.png" alt=""></a></li>
                 <li class="inline-block mr-4"><a href="#"><img class="w-[60px]" src="images/twitter.png" alt=""></a></li>
                 <li class="inline-block mr-4"><a href="#"><img class="w-[60px]" src="images/discord.png" alt=""></a></li>
@@ -634,6 +772,15 @@ accordionHeaders.forEach(header => {
 });
 
     </script>
+
+<script>
+  const toggleButton = document.querySelector('.toggle-button');
+  const navbarLinks = document.querySelector('.navbar-links');
+
+  toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+  });
+</script>
   <script>
     $(function(){
       $('#menu').slicknav();
